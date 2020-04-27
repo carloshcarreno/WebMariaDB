@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    </h:head>
+    <h:body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <div class="card">
+                    <article class="card-body">
+                        <h4 class="card-title text-center mb-4 mt-1">Sign in</h4>
+                        <hr/>
+                        <p class="text-success text-center">Some message goes here</p>
+                        <h:form>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                    </div>
+                                    <h:inputText styleClass="form-control" a:placeholder="User id" 
+                                                 value="#{authController.usuario.idUsuario}"  />
+                                </div> <!-- input-group.// -->
+                            </div> <!-- form-group// -->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <h:inputSecret styleClass="form-control" a:placeholder="Password" 
+                                                   value="#{authController.usuario.passwordUsuario}"  />
+                                </div> <!-- input-group.// -->
+                            </div> <!-- form-group// -->
+                            <div class="form-group">
+                                <h:commandButton styleClass="btn btn-primary btn-block" value="Login"
+                                                 action="#{authController.login()}" />
+                            </div> <!-- form-group// -->
+                            <p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
+                        </h:form>
+                    </article>
+                </div> <!-- card.// -->
+            </div>
+            <div class="col-md-4"></div>    
+        </div> <!-- row.// -->
+
+    </h:body>
+
+
+</html>
+
